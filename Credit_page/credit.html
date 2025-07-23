@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credits</title>
+    <style>
+        :root {
+            --primary-color: #2b2d42;
+            --secondary-color: #ef233c;
+            --background: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--background);
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 1rem;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            font-weight: 800;
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        h1::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 5px;
+            background: var(--secondary-color);
+            margin: 0.5rem auto 0;
+            border-radius: 5px;
+        }
+
+        .credit-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: clamp(1.5rem, 5vw, 2.5rem);
+            width: 100%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .credit-text {
+            font-size: clamp(1.2rem, 4vw, 1.8rem);
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 1.5rem 1rem;
+            }
+
+            .container {
+                gap: 1.5rem;
+            }
+
+            .credit-card {
+                padding: 1.5rem 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>CREDITS</h1>
+        <div class="credit-card">
+            <p class="credit-text">@animeshtheghost</p>
+        </div>
+    </div>
+</body>
+
+</html>

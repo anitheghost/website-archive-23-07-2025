@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RIP Website</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(ellipse at bottom, #0a0a0a 0%, #000 100%);
+      color: #ccc;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow-x: hidden;
+      height: 100%;
+    }
+
+    .sky {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .stars {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    .star {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: twinkle 2s infinite ease-in-out;
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; }
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 100%;
+      padding: 20px;
+    }
+
+    .graveyard-scene {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-top: auto;
+      margin-bottom: 60px;
+    }
+
+    .grave {
+      width: 120px;
+      height: 160px;
+      background: #222;
+      border-radius: 60px 60px 0 0;
+      position: relative;
+      box-shadow: inset 0 0 10px #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .grave::after {
+      content: 'RIP';
+      color: #666;
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+
+    .candle {
+      font-size: 3em;
+      position: absolute;
+      bottom: 20px;
+      left: -30px;
+      animation: flicker 1.5s infinite alternate;
+      text-shadow: 0 0 20px #ffb400, 0 0 40px #ff9900;
+    }
+
+    @keyframes flicker {
+      0% { text-shadow: 0 0 10px #ffb400, 0 0 20px #ff9900; }
+      100% { text-shadow: 0 0 25px #ffb400, 0 0 50px #ff9900; }
+    }
+
+    .message {
+      margin-top: 40px;
+      max-width: 90%;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #eee;
+      text-shadow: 0 0 10px #555;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2em;
+      color: #aaa;
+      margin: 8px 0;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+      font-size: 0.9em;
+      color: #555;
+      z-index: 3;
+    }
+
+    @media (max-width: 600px) {
+      .graveyard-scene {
+        gap: 20px;
+      }
+      .grave {
+        width: 80px;
+        height: 110px;
+      }
+      .candle {
+        font-size: 2.5em;
+        left: -20px;
+      }
+      h1 {
+        font-size: 2em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="sky">
+    <div class="stars" id="stars"></div>
+
+    <div class="content">
+      <div class="message">
+        <h1>Rest In Peace</h1>
+        <p>This website is coming to an end on:</p>
+        <p>August 3, 2025</p>
+        <p>Thank you for being a part of the journey.</p>
+      </div>
+
+      <div class="graveyard-scene">
+        <div class="grave">
+          <div class="candle">🕯️</div>
+        </div>
+        <div class="grave"></div>
+        <div class="grave"></div>
+      </div>
+    </div>
+
+    <footer>🕯️ Final visit: August 3, 2025</footer>
+  </div>
+
+  <script>
+    const starsContainer = document.getElementById('stars');
+    for (let i = 0; i < 100; i++) {
+      const star = document.createElement('div');
+      star.classList.add('star');
+      star.style.top = Math.random() * 100 + '%';
+      star.style.left = Math.random() * 100 + '%';
+      star.style.animationDelay = `${Math.random() * 3}s`;
+      starsContainer.appendChild(star);
+    }
+  </script>
+</body>
+</html>

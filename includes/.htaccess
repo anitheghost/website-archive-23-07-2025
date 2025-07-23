@@ -1,0 +1,5 @@
+# .htaccess in the includes folder
+<FilesMatch "\.(php)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>

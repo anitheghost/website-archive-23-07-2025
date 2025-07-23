@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Love You</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        /* Background styling */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #7B4397, #DC2430);
+            color: #FFFFFF;
+        }
+
+        /* Container styling */
+        .love-container {
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Emoji styling */
+        .heart-emoji {
+            font-size: 5rem;
+            animation: pulse 1.5s infinite;
+        }
+
+        /* Text styling */
+        .love-text {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .heart-emoji {
+                font-size: 4rem;
+            }
+            .love-text {
+                font-size: 2rem;
+            }
+        }
+
+        /* Pulse animation for the heart */
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        /* Fade-in animation for the text */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="love-container">
+        <div class="heart-emoji">❤️</div>
+        <div class="love-text">I Love You!</div>
+    </div>
+</body>
+</html>

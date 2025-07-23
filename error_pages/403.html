@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>403 - Forbidden</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #fff;
+            background: linear-gradient(135deg, #001f3f, #003366);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        @keyframes gradientBG {
+            0% { background-position: 0% 0%; }
+            50% { background-position: 100% 100%; }
+            100% { background-position: 0% 0%; }
+        }
+        .container {
+            padding: 40px;
+            max-width: 90%;
+            width: 600px;
+            margin: 0 auto;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(15px);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.9);
+        }
+        .icon {
+            font-size: 5em;
+            color: #FF0000;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 4em;
+            margin: 0;
+            color: #FF0000;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+            font-family: 'Arial Black', sans-serif;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0% { text-shadow: 3px 3px 6px rgba(255, 0, 0, 0.8); }
+            50% { text-shadow: 3px 3px 12px rgba(255, 0, 0, 0.6); }
+            100% { text-shadow: 3px 3px 6px rgba(255, 0, 0, 0.8); }
+        }
+        p {
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+        .footer {
+            font-size: 1em;
+            color: #aaa;
+        }
+        .footer a {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1.1em;
+            color: #fff;
+            background-color: #007bff; /* Button color */
+            border: 1px solid #0056b3; /* Button border color */
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .footer a:hover {
+            background-color: #0056b3; /* Darker shade on hover */
+            transform: scale(1.05); /* Slight scale-up effect */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">&#9888;</div>
+        <h1>403</h1>
+        <p>Access to this page is forbidden.</p>
+        <p>If you believe this is an error, please contact support.</p>
+        <p class="footer"><a href="/">Return to the homepage</a></p>
+    </div>
+</body>
+</html>
